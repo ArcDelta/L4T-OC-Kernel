@@ -68,16 +68,16 @@ CPU Rate :<br>
 `watch -n1 sudo cat /sys/kernel/debug/tegra_dfll_fcpu/rate`
 
 CPU Voltage :<br>
-`sudo cat /sys/kernel/debug/tegra_dfll_fcpu/output_mv`
+`watch -n1 sudo cat /sys/kernel/debug/tegra_dfll_fcpu/output_mv`
 
 GPU Voltage :<br>
-`sudo cat /sys/kernel/debug/57000000.gpu/voltage`
+`watch -n1 sudo cat /sys/kernel/debug/57000000.gpu/voltage`
 
 RAM VDDQ :<br>
-`sudo cat /sys/kernel/debug/regulator/vdd-ddr/regulator/microvolts`
+`watch -n1 sudo cat /sys/kernel/debug/regulator/vdd-ddr/regulator/microvolts`
 
 RAM VDD2 :<br>
-`sudo cat /sys/kernel/debug/regulator/vddio-ddr/regulator/microvolts`
+`watch -n1 sudo cat /sys/kernel/debug/regulator/vddio-ddr/regulator/microvolts`
 
 ## Sources : 
 [l4t-kernel-build-scripts](https://github.com/NaGaa95/l4t-kernel-build-scripts)<br>

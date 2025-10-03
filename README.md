@@ -75,10 +75,10 @@ CPU Voltage :<br>
 GPU Voltage :<br>
 `watch -n1 sudo cat /sys/kernel/debug/57000000.gpu/voltage`
 
-RAM VDDQ :<br>
+RAM VDD2 :<br>
 `watch -n1 sudo cat /sys/kernel/debug/regulator/vdd-ddr/regulator/microvolts`
 
-RAM VDD2 :<br>
+RAM VDDQ :<br>
 `watch -n1 sudo cat /sys/kernel/debug/regulator/vddio-ddr/regulator/microvolts`
 
 ## Sources : 

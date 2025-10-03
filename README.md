@@ -14,7 +14,7 @@ Overclocking in general will shorten the lifespan of some hardware components.<b
 - CPU UV Override 1-6 
 - CPU High Freq vMin Override
 - Increased SoC / CPU / GPU vMin
-- 1250 mV VDD2
+- Allow up to 1250 mV VDD2 
 - 40/45/48/50Hz Refresh Rate Support
 - LiHV Battery Upgrade Support 
 - Nyxi Joycon Support
@@ -29,21 +29,23 @@ Overclocking in general will shorten the lifespan of some hardware components.<b
 
 ### **L4T.ini Configuration :**
 
- `dvfsb=1`
+ - `dvfsb=1`
 
- `gpu_dvfsc=1`
+ - `gpu_dvfsc=1`
 
- `cpu_uv=` (1-6 - Recommended 4)
+ - `cpu_uv=` (1-6 - Recommended 4)
 
- `cpu_hmin=` (Desired value in mV - Default 850)
+ - `cpu_hmin=` (Desired value in mV - Default 850)
 <br><br>
 
 ⚠️ **ONLY FOR BATTERY UPGRADE - MAKE SURE YOUR BATTERY IS ABLE TO HANDLE 4.32V** ⚠️ <br>
-`lihv=1` (Set max charging voltage to 4.32v)
+- `lihv=1` (Set max charging voltage to 4.32v)
 <br><br>
 ### **Optional :** <br>
+- For RAM VDD2 Overvolt (+1175 mV) use my hekate fork available [here](https://github.com/NaGaa95/hekate/releases)
+  
+- NVPModel Profiles :<br>
 Replace `nvpmodel_t210b01.conf` in `/etc/nvpmodel/nvpmodel_t210b01.conf` **(NEED ROOT ACCESS)**
-
 0. Low Power   : 1785 - 614
 1. Handheld    : 1963 - 921
 2. OC CPU      : 2703 - 921
@@ -59,7 +61,7 @@ Without UV, it will use high voltage, and the actual frequency will be much lowe
 
 Be careful when using a high CPU UV preset with a low **`cpu_hmin`** value, as it can cause instability at **1963-2193 MHz**
 
-On **Switch Lite**, CPU is now limited to **2397 MHz** and GPU to **1228 MHz**
+On **Switch Lite**, GPU is limited to **1152 MHz**<br>
 It may shut down when running on battery if the power draw is too high ⚠️ <br>
 It's recommended to use it with a charger connected or limit frequency via NVPModel profiles
 
